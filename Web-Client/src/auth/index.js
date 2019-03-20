@@ -43,9 +43,11 @@ export default {
       }
     }
     let auth = Boolean(jwt);
-    let token = parseJwt(jwt);
-    if (token.exp) {
-      auth = ((new Date()) < (new Date(Date(token.exp))));
+    if (auth) {
+      let token = parseJwt(jwt);
+      if (token.exp) {
+        auth = ((new Date()) < (new Date(Date(token.exp))));
+      }
     }
     if (window.vueApp) {
       window.vueApp.authenticated = auth;

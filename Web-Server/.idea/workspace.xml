@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac285b86-f336-4eaf-b4ea-2727e822b035" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/web/app/ObjectTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/authentication/Authenticate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/bson4jackson-2.9.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jongo-1.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mongo-java-driver-3.7.1.jar" afterDir="false" />
-    </list>
+    <list default="true" id="ac285b86-f336-4eaf-b4ea-2727e822b035" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,11 +68,8 @@
       <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/settings/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" column="119" lean-forward="true" selection-start-line="18" selection-start-column="119" selection-end-line="18" selection-end-column="119" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -242,7 +233,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -577,12 +568,12 @@
       <workItem from="1552688899333" duration="19782000" />
       <workItem from="1553068789278" duration="55000" />
       <workItem from="1553068848497" duration="5592000" />
-      <workItem from="1553074497768" duration="5101000" />
+      <workItem from="1553074497768" duration="5460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269189000" />
+    <option name="totallyTimeSpent" value="269548000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,8 +585,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32838285" />
@@ -618,7 +608,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.53960395" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32761577" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49744898" visible="true" weight="0.2065053" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49744898" visible="true" weight="0.2065053" />
       <window_info id="Web" order="5" sideWeight="0.50165015" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32761577" />
       <window_info id="JavaEE:App" order="4" side_tool="true" />
@@ -1092,11 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/settings/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="119" lean-forward="true" selection-start-line="18" selection-start-column="119" selection-end-line="18" selection-end-column="119" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
