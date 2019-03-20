@@ -1,0 +1,5 @@
+use eventer;
+
+db.createCollection("users", {autoIndexId: true});
+db.createCollection("writer", {autoIndexId: true});
+db.createCollection("logs", {autoIndexId: true});

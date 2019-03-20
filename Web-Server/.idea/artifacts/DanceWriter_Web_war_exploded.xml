@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="DanceWriter-Web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Eventer-WebServer_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Eventer-WebServer/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Eventer-WebServer" />
+          <element id="jpa-descriptors" facet="Eventer-WebServer/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jackson-core-2.9.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jackson-databind-2.9.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jackson-annotations-2.9.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/java-jwt-3.4.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-codec-1.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/hibernate-types-52-2.4.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jongo-1.4.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/bson4jackson-2.9.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mongo-java-driver-3.7.1.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Eventer-WebServer/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="META-INF" />
+    </root>
+  </artifact>
+</component>
