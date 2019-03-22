@@ -7,6 +7,7 @@
   "page": {
     "": " Начало"
   },
+
   "login": {
     "": "Вход",
     "username": "Потребитеско име",
@@ -15,11 +16,15 @@
       "emptyUsername": "Моля въведете потребителското си име!",
       "emptyPassword": "Моля въведете своята парола!",
       "invalidCredentials": "Грешно потребителско име или грешна парола! :/"
-    }
+    },
+    "alreadyRegistered": "Вече имаш регистация? ",
+    "singIn": "Впиши се!"
   },
+
   "jumbotron": {
     "welcome": "Добре дошли в Eventer!"
   },
+
   "register": {
     "": "Регистрация",
     "username": "Потребитеско име",
@@ -27,7 +32,7 @@
     "rePassword": "Повторете паролата",
     "firstName": "Име",
     "lastName": "Фамилия",
-    "email": "e-mail",
+    "email": "E-mail",
     "error": {
       "empty": {
         "username": "Моля, въведете потребителско име!",

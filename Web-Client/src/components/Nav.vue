@@ -19,10 +19,10 @@
           </template>
           <template v-else>
             <!-- Login -->
-            <login></login>
+            <login ref="login"></login>
             <!--/ Login -->
             <!-- Register -->
-            <register></register>
+            <register ref="register"></register>
             <!--/ Register -->
           </template>
         </mdb-navbar-nav>
