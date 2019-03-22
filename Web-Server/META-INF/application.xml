@@ -4,9 +4,9 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_8.xsd"
              version="8">
 
-	<module id="DanceWriter">
+	<module id="Eventer">
 		<web>
-			<context-root>DanceWriter</context-root>
+			<context-root>Eventer</context-root>
 			<web-uri>web.war</web-uri>
 		</web>
 	</module>

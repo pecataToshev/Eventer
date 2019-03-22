@@ -68,6 +68,7 @@ export default {
   // eslint-disable-next-line max-params
   requestToBackend: (url, method, data, successCallback = null, errorCallback = null) => {
     console.log(method || 'POST');
+    console.log(process.env.URL + url);
     axios({
       method: (method || 'POST'),
       url: process.env.URL + url,
@@ -82,12 +83,6 @@ export default {
         }
 
         (errorCallback || backend.error)(response);
-        // if (errorCallback) {
-        //   console.log("errorCallback");
-        //   errorCallback(response);
-        //   console.log("asdasd");
-        // } else
-        //   backend.error(response);
       }
     );
   }

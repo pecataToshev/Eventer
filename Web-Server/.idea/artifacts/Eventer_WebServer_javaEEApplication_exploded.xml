@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ear" name="Eventer-WebServer:javaEEApplication exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/DanceWriter_Web_javaEEApplication_exploded</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/Eventer_Web_javaEEApplication_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="Eventer-WebServer/javaeeApplication/javaEEApplication" />
       <element id="javaee-facet-resources" facet="Eventer-WebServer/web/Web" />
