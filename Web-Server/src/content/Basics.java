@@ -1,10 +1,12 @@
 package content;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import exceptions.FileReadingException;
 import head.LogType;
 import head.Logs;
 import models.BaseEntity;
@@ -29,10 +31,6 @@ public class Basics {
 	}
 
 	public static String getCollectionName(Class<?> entityClass) {
-		System.out.println(entityClass);
-		System.out.println(entityClass.getAnnotation(MongoTable.class));
-		System.out.println(entityClass.getAnnotation(MongoTable.class).name());
-
 		return entityClass.getAnnotation(MongoTable.class).name();
 	}
 
@@ -67,16 +65,17 @@ public class Basics {
 	}
 
 	public static <E extends Enum<E>> String enumToJson(Class enumerationClass) {
+		final String prefix = "OK:[";
 		Enum<E>[] possibleValues = (Enum<E>[]) enumerationClass.getEnumConstants();
 		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("OK:[");
+		stringBuilder.append(prefix);
 		for(Enum<E> type : possibleValues) {
 			stringBuilder.append('{');
 			stringBuilder.append("\"id\":\"" + type + "\",");
 			stringBuilder.append("\"name\":\"" + type + "\"");
 			stringBuilder.append("},");
 		}
-		if(stringBuilder.length() > 4)
+		if(stringBuilder.length() > prefix.length())
 			stringBuilder.setLength(stringBuilder.length() - 1);
 		stringBuilder.append(']');
 		return stringBuilder.toString();
@@ -84,12 +83,7 @@ public class Basics {
 
 	public static String serializeObject(Object obj, boolean pretty) {
 		try {
-
-			ObjectMapper mapper = new ObjectMapper();
-			if (pretty)
-				return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
-
-			return mapper.writeValueAsString(obj);
+			return Config.getObjectWriterConfigured().writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
 			if(Config.getConfigWebApp().isDeveloperMode())
 				e.printStackTrace();
@@ -106,6 +100,16 @@ public class Basics {
 		return serializeObject(obj, false);
 	}
 
+	public static String throwableToString(Throwable e) {
+		if(e == null)
+			return "";
+
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter(sw);
+		e.printStackTrace(pw);
+		return sw.toString();
+	}
+
 	public static String exceptionToString(Exception e) {
 		StringWriter sw = new StringWriter();
 		PrintWriter pw = new PrintWriter(sw);
@@ -119,5 +123,24 @@ public class Basics {
 			fields.addAll(Arrays.asList(aClass.getDeclaredFields()));
 
 		return fields;
+	}
+
+	public static final String readFileToString(File file) throws FileReadingException {
+		StringBuilder sb = new StringBuilder();
+
+		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+			String line = br.readLine();
+
+			while (line != null) {
+				sb.append(line);
+				sb.append(System.lineSeparator());
+				line = br.readLine();
+			}
+		} catch (IOException e) {
+			Logs.add(LogType.ERROR, "problem with file... " + file.getAbsoluteFile(), e);
+			throw new FileReadingException();
+		}
+
+		return sb.toString();
 	}
 }

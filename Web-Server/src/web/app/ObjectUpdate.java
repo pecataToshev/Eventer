@@ -1,19 +1,8 @@
 package web.app;
 
-import access.AccessBase;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import exceptions.EmptyParameterException;
-import exceptions.UsedUniqueKeyException;
-import head.Basics;
-import head.LogType;
-import head.Logs;
 import org.bson.types.ObjectId;
-import settings.Config;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import web.ServletTemplate;
 import web.requestInterfaces.Post;
 
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

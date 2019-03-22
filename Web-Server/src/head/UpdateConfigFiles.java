@@ -1,5 +1,6 @@
 package head;
 
+import content.Basics;
 import settings.Config;
 import settings.ConfigWebApp;
 import settings.DBCredentials;

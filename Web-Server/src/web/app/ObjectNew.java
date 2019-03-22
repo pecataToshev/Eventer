@@ -2,14 +2,14 @@ package web.app;
 
 import access.AccessBase;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import exceptions.EmptyParameterException;
-import exceptions.UsedUniqueKeyException;
-import head.Basics;
+import exceptions.NotImplementedException;
+import exceptions.baseEntity.EmptyParameterException;
+import exceptions.baseEntity.UsedUniqueKeyException;
+import exceptions.baseEntity.WrongTypeException;
 import head.LogType;
 import head.Logs;
 import org.bson.types.ObjectId;
 import settings.Config;
-import web.ServletTemplate;
 import web.requestInterfaces.Post;
 
 import javax.servlet.annotation.MultipartConfig;
@@ -41,26 +41,26 @@ public class ObjectNew extends ObjectTemplate implements Post {
 		if(checkFindObject(response, writer, access))
 			return;
 
-//		try {
-//
-////			Object result = ((Access) access).createNewObject(request);
-////			writer.write("OK" + (result != null ?
-////					(":" + Config.getObjectWriterConfigured().writeValueAsString(result)) : ""));
-//
-//		} catch (EmptyParameterException | JsonProcessingException | IllegalAccessException e) {
-//			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-//			writer.write("MissingParameter " + (e.getMessage() != null ? e.getMessage() : ""));
-//			Logs.add(LogType.WARNING, "MissingParameter\n" + requestToString(request), e, userID);
-//		} catch (NotImplementedException e) {
-//			response.setStatus(HttpServletResponse.SC_NOT_IMPLEMENTED);
-//			writer.write("NotImplemented");
-//			Logs.add(LogType.WARNING, "NotImplemented\n" + requestToString(request), e, userID);
-//		} catch (UsedUniqueKeyException e) {
-//			response.setStatus(HttpServletResponse.SC_CONFLICT);
-//			if(e.getMessage() != null)
-//				writer.write(e.getMessage());
-//
-//			Logs.add(LogType.WARNING, "UsedUniqueKeyException\n" + requestToString(request), e, userID);
-//		}
+		try {
+
+			Object result = ((AccessBase) access).createNewObject(request);
+			writer.write("OK" + (result != null ?
+					(":" + Config.getObjectWriterConfigured().writeValueAsString(result)) : ""));
+
+		} catch (EmptyParameterException | JsonProcessingException | IllegalAccessException | WrongTypeException | NullPointerException e) {
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			writer.write("MissingParameter " + (e.getMessage() != null ? e.getMessage() : ""));
+			Logs.add(LogType.WARNING, "MissingParameter\n" + requestToString(request), e, userID);
+		} catch (NotImplementedException e) {
+			response.setStatus(HttpServletResponse.SC_NOT_IMPLEMENTED);
+			writer.write("NotImplemented");
+			Logs.add(LogType.WARNING, "NotImplemented\n" + requestToString(request), e, userID);
+		} catch (UsedUniqueKeyException e) {
+			response.setStatus(HttpServletResponse.SC_CONFLICT);
+			if(e.getMessage() != null)
+				writer.write(e.getMessage());
+
+			Logs.add(LogType.WARNING, "UsedUniqueKeyException\n" + requestToString(request), e, userID);
+		}
 	}
 }

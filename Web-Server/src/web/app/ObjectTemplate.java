@@ -1,6 +1,6 @@
 package web.app;
 
-import head.Basics;
+import content.Basics;
 import head.LogType;
 import head.Logs;
 import org.bson.types.ObjectId;
