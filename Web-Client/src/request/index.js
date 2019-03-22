@@ -3,7 +3,7 @@ import auth from '../auth';
 
 const backend = {
   error: response => {
-    console.log("ERROR");
+    console.log("ERROR DEFAULT");
     if (response instanceof Error) {
       console.log("response.message");
       console.log(response.message);
@@ -25,6 +25,7 @@ const backend = {
     console.log(response.response.headers);
   },
   success: response => {
+    console.log("SUCCESS DEFAULT");
     try {
       console.log(response);
       let result = response.content.toJSON();
@@ -65,7 +66,7 @@ export default {
    * @returns {void}
    */
   // eslint-disable-next-line max-params
-  requestToBackend: (url, method, data, successCallback, errorCallback) => {
+  requestToBackend: (url, method, data, successCallback = null, errorCallback = null) => {
     console.log(method || 'POST');
     axios({
       method: (method || 'POST'),
@@ -76,10 +77,17 @@ export default {
     }).then(
       (successCallback || backend.success),
       response => {
-        if (response.response.status == 401) {
+        if (Boolean(response.response) && Boolean(response.response.status) && response.response.status == 401) {
           auth.logout();
         }
+
         (errorCallback || backend.error)(response);
+        // if (errorCallback) {
+        //   console.log("errorCallback");
+        //   errorCallback(response);
+        //   console.log("asdasd");
+        // } else
+        //   backend.error(response);
       }
     );
   }

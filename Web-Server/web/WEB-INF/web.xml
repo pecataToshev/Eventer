@@ -8,7 +8,7 @@
 
 	<context-param>
 		<param-name>DataPathWin</param-name>
-		<param-value>D:\Projects\Eventer</param-value>
+		<param-value>C:\Eventer</param-value>
 	</context-param>
 
 	<context-param>

@@ -30,22 +30,12 @@
             <div class="invalid-feedback">{{ 'register.error.empty.rePassword' | translate}}</div>
           </mdb-input>
           <div class="row d-flex justify-content-center">
-          <mdb-btn gradient="aqua" center>
-            <span v-show="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            {{ 'register.' | translate}}
-          </mdb-btn>
+            <mdb-btn type="submit" gradient="aqua" center>
+              <span v-show="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              {{ 'register.' | translate}}
+            </mdb-btn>
           </div>
         </mdb-modal-body>
-        <!--<mdb-modal-footer center>
-          <mdb-btn gradient="aqua">
-            <span v-show="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            {{ 'register.' | translate}}
-          </mdb-btn>
-          <p>
-            {{'login.alreadyRegistered' | translate}}
-            <a @click="openLogin blue-text m1-1">{{'login.singIn' | translate}}</a>
-          </p>
-        </mdb-modal-footer>-->
         <mdb-modal-footer class="mx-5 pt-3 mb-1" center>
           <p class="font-small grey-text d-flex justify-content-end">
             {{'login.alreadyRegistered' | translate}}
