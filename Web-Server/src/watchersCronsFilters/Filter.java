@@ -21,7 +21,7 @@ public class Filter implements javax.servlet.Filter {
 			System.out.println("FORBIDDEN " + path);
 		}
 		response.setStatus(loggedIn ? HttpServletResponse.SC_FORBIDDEN : HttpServletResponse.SC_UNAUTHORIZED);
-		response.sendRedirect(Config.getConfigWebApp().getUrlPrefix() + login);
+//		response.sendRedirect(Config.getConfigWebApp().getUrlPrefix() + login);
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)

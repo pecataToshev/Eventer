@@ -1,7 +1,7 @@
 package models;
 
+import content.Basics;
 import content.MongoTable;
-import head.Basics;
 import head.LogType;
 import org.bson.types.ObjectId;
 
@@ -35,6 +35,14 @@ public class Log extends BaseObjectEntity {
 
 	public void setType(LogType type) {
 		this.type = type;
+	}
+
+	public ObjectId getUser() {
+		return user;
+	}
+
+	public void setUser(ObjectId user) {
+		this.user = user;
 	}
 
 	public void reset(LogType type, String message) {

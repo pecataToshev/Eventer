@@ -1,9 +1,9 @@
 package web.app;
 
 import access.AccessBase;
+import content.Basics;
 import org.bson.types.ObjectId;
 import exceptions.RequestProcessingException;
-import head.Basics;
 import settings.AppRequestAttributes;
 import settings.Config;
 import web.requestInterfaces.Get;
@@ -52,9 +52,9 @@ public class ObjectGetList extends ObjectTemplate implements Get {
 		// endregion
 
 		try {
-//			writer.write("OK:" + Config.getObjectWriterConfigured().writeValueAsString(
-//					((Access) access).getAllInRange(start, limit, (Integer) request.getAttribute(AppRequestAttributes.USER_ID)))
-//			);
+			writer.write("OK:" + Config.getObjectWriterConfigured().writeValueAsString(
+					((AccessBase) access).getInRange(start, limit, request/*(Integer) request.getAttribute(AppRequestAttributes.USER_ID)*/))
+			);
 		} catch (Exception e) {
 			throw new RequestProcessingException("Cannot convert object to json.", e);
 		}

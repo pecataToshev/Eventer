@@ -53,7 +53,7 @@ public class AccessUser extends AccessBase {
 	}
 
 	private void checkPasswordMatch(User user, HttpServletRequest request) throws UsedUniqueKeyException {
-		if(!user.getPassword().equals(request.getParameter("re-password")))
+		if(!user.getPassword().equals(request.getParameter("rePassword")))
 			throw new UsedUniqueKeyException("PasswordsNotMatching");
 
 		user.setPassword(hashPass(user.getPassword(), user.getUsername()));

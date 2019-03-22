@@ -130,16 +130,18 @@ public class ServletTemplate extends HttpServlet {
 					HttpServletResponse.class,
 					HttpSession.class,
 					PrintWriter.class,
-					Integer.class
+					ObjectId.class
 			);
 
 			method.invoke(this, request, response, session, writer, userID);
 		} catch (Throwable e) {
+			LogType logType = LogType.WARNING;
 			if(e instanceof NoSuchMethodException) {
+				logType = LogType.ERROR;
 				writeError(writer, response, httpMethod);
 			}
 			Logs.add(
-					LogType.WARNING,
+					logType,
 					"Cannot process request:\n" + requestToString(request),
 					e,
 					userID

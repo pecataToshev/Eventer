@@ -1,5 +1,6 @@
 package settings;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -16,7 +17,9 @@ import java.nio.file.Path;
 
 public class Config {
 	public static final int MAX_LENGTH_OF_ACCESS_CODE = 32;
-	public static final ObjectMapper MAPPER = new ObjectMapper().configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
+	public static final ObjectMapper MAPPER = new ObjectMapper()
+			.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true)
+			.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 	public static final long TIMESTAMP_CREATION_TIME = System.currentTimeMillis();
 	public static final RandomString RANDOM_STRING = new RandomString();
 
