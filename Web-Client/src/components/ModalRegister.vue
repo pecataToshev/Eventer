@@ -107,7 +107,7 @@
         if(document.getElementById("modal-login").querySelectorAll("form:valid").length > 0) {
           this.loading = true;
           request.requestToBackend(
-            "login/Login",
+            "login/Register",
             'POST',
             data,
             response => {
@@ -116,6 +116,7 @@
               this.invalidCredentials = true;
             },
             response => {
+              console.log(response);
               this.loading = false;
               this.invalidCredentials = true;
             }
