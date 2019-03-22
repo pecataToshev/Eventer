@@ -13,7 +13,7 @@
             <div class="invalid-feedback">{{ 'login.error.emptyUsername' | translate}}</div>
           </mdb-input>
           <mdb-input :label="$t('login.password')" v-model="credentials.password" icon="lock" type="password" required>
-            <div class="invalid-feedback">{{ 'login.error.emptyUsername' | translate}}</div>
+            <div class="invalid-feedback">{{ 'login.error.emptyPassword' | translate}}</div>
           </mdb-input>
         </mdb-modal-body>
         <mdb-modal-footer center>
@@ -21,6 +21,11 @@
             <span v-show="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             {{ 'login.' | translate}}
           </mdb-btn>
+          <p>
+            {{'register.noRegistration' | translate}}
+            <a @click="openRegister">{{'register.invite' | translate}}</a>
+          </p>
+
         </mdb-modal-footer>
       </mdb-modal>
     </mdb-container>
@@ -81,6 +86,9 @@
             }
           );
         }
+      },
+      openRegister(event){
+        console.log(event);
       }
     }
 

@@ -21,6 +21,9 @@
             <!-- Login -->
             <login></login>
             <!--/ Login -->
+            <!-- Register -->
+            <register></register>
+            <!--/ Register -->
           </template>
         </mdb-navbar-nav>
         <mdb-navbar-nav right>
@@ -52,6 +55,7 @@
 import { mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbDropdown, mdbDropdownItem, mdbDropdownMenu,
   mdbDropdownToggle, mdbNavbarBrand, mdbBtn } from 'mdbvue';
 import Login from './ModalLogin';
+import Register from './ModalRegister';
 
 import { languages } from "../router";
 import router from "../router";
@@ -78,15 +82,15 @@ export default {
     mdbDropdownToggle,
     mdbNavbarBrand,
     mdbBtn,
-    Login
+    Login,
+    Register
   },
   data() {
     return {
       active: {
         0: true
       },
-      languages: langs,
-      login: false
+      languages: langs
     };
   },
   methods: {
