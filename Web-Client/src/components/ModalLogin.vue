@@ -8,8 +8,8 @@
           <mdb-modal-title tag="h4" bold class="w-100">{{ 'login.' | translate}}</mdb-modal-title>
         </mdb-modal-header>
         <mdb-modal-body class="mx-3 grey-text">
-          <div class="red-text" v-show="invalidCredentials">{{ 'login.invalidCredentials' | translate}}</div>
-          <mdb-input :label="$t('login.username')" v-model="credentials.username" icon="envelope" type="text" class="mb-2" required>
+          <div class="red-text" v-show="invalidCredentials">{{ 'login.error.invalidCredentials' | translate}}</div>
+          <mdb-input :label="$t('login.username')" v-model="credentials.username" icon="envelope" type="text" class="mb-3" required>
             <div class="invalid-feedback">{{ 'login.error.emptyUsername' | translate}}</div>
           </mdb-input>
           <mdb-input :label="$t('login.password')" v-model="credentials.password" icon="lock" type="password" class="mb-2" required>

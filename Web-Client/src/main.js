@@ -13,6 +13,7 @@ Vue.use(VueCookie);
 // region Components
 import App from './App';
 import Navigation from './components/Nav';
+import myFooter from './components/Footer';
 // endregion
 
 Vue.config.productionTip = false;
@@ -26,7 +27,8 @@ const app = new Vue({
   },
   components: {
     App,
-    Navigation
+    Navigation,
+    myFooter
   },
   methods: {
     formatLink: router.options.methods.formatCustomLink

@@ -2,5 +2,62 @@
   "nav": {
     "home": "Home",
     "languageChange": "Change language"
+  },
+  "page": {
+    "": " Home",
+    "about": "About"
+  },
+
+  "login": {
+    "": "Log in",
+    "username": "Username",
+    "password": "Password",
+    "error": {
+      "emptyUsername": "Enter username!",
+      "emptyPassword": "Enter password",
+      "invalidCredentials": "Wrong username or password! :/"
+    },
+    "alreadyRegistered": "Already registered? ",
+    "singIn": "Sign in!"
+  },
+  "home": {
+    "jumbotron": {
+      "welcome": "Welcome to Eventer!",
+      "begin": "Let's begin"
+    }
+  },
+
+  "register": {
+    "": "Register",
+    "username": "Username",
+    "password": "Password",
+    "rePassword": "Repeat password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "E-mail",
+    "error": {
+      "empty": {
+        "username": "Enter username, please!",
+        "password" : "Enter password, please!",
+        "rePassword" : "Enter password again!",
+        "firstName": "Enter first name, please!",
+        "lastName" : "Enter last name, please!",
+        "email" : "Enter e-mail, please!"
+      },
+      "takenUsername": "Entered username is taken!",
+      "takenEmail" : "Entered e-mail is taken!",
+      "invalidPassword": "Password needs to contain at least 8 characters!",
+      "varyingPasswords": "Passwords not matching!"
+    },
+    "noRegistration": "Not registered? ",
+    "invite": "Register now!"
+  },
+  "footer": {
+    "about": "About",
+    "guide": "Site map",
+    "contact": " Contacts"
+
   }
 }
+
+

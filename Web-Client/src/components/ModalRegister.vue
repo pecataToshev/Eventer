@@ -11,19 +11,19 @@
           <div class="red-text" v-show="error.invalidPassword">{{ 'register.error.invalidPassword' | translate}}</div>
           <div class="red-text" v-show="error.varyingPasswords">{{ 'register.error.varyingPasswords' | translate}}</div>
 
-          <mdb-input :label="$t('register.firstName')" v-model="credentials.firstName" icon="user" type="text" class="mb-2" required>
+          <mdb-input :label="$t('register.firstName')" v-model="credentials.firstName" icon="user" type="text" class="mb-3" required>
             <div class="invalid-feedback">{{ 'register.error.empty.firstName' | translate}}</div>
           </mdb-input>
-          <mdb-input :label="$t('register.lastName')" v-model="credentials.lastName" icon="user" type="text" class="mb-2" required>
+          <mdb-input :label="$t('register.lastName')" v-model="credentials.lastName" icon="user" type="text" class="mb-3" required>
             <div class="invalid-feedback">{{ 'register.error.empty.lastName' | translate}}</div>
           </mdb-input>
-          <mdb-input :label="$t('register.username')" v-model="credentials.username" icon="user" type="text" class="mb-2" required>
+          <mdb-input :label="$t('register.username')" v-model="credentials.username" icon="user" type="text" class="mb-3" required>
             <div class="invalid-feedback">{{ 'register.error.empty.username' | translate}}</div>
           </mdb-input>
-          <mdb-input :label="$t('register.email')" v-model="credentials.email" icon="envelope" type="email" class="mb-2" required>
+          <mdb-input :label="$t('register.email')" v-model="credentials.email" icon="envelope" type="email" class="mb-3" required>
             <div class="invalid-feedback">{{ 'register.error.empty.email' | translate}}</div>
           </mdb-input>
-          <mdb-input :label="$t('register.password')" v-model="credentials.password" icon="lock" type="password" class="mb-2" required>
+          <mdb-input :label="$t('register.password')" v-model="credentials.password" icon="lock" type="password" class="mb-3" required>
             <div class="invalid-feedback">{{ 'register.error.empty.password' | translate}}</div>
           </mdb-input>
           <mdb-input :label="$t('register.rePassword')" v-model="credentials.rePassword" icon="exclamation-triangle" type="password" class="mb-2" required>

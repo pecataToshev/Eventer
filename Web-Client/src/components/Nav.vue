@@ -11,10 +11,7 @@
               <router-link :to="$root.formatLink('')">{{ 'nav.home' | translate }}</router-link>
             </mdb-nav-item>
             <mdb-nav-item waves-fixed>
-              <router-link :to="$root.formatLink('about')">Home11111</router-link>
-            </mdb-nav-item>
-            <mdb-nav-item waves-fixed>
-              <router-link :to="$root.formatLink('contact')">Home123</router-link>
+              <router-link :to="$root.formatLink('eventList')">{{'nav.events' | translate}}</router-link>
             </mdb-nav-item>
           </template>
           <template v-else>

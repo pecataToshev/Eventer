@@ -37,9 +37,11 @@ i18n.fallback(defaultLanguage);
 
 // region Components and default routes
 import Home from '../components/Home';
-import HelloWorld from '../components/HelloWorld';
-import HelloWorld1 from '../components/HelloWorld1';
 import NotFound from '../components/NotFound';
+import EventList from '../components/EventList';
+import Contacts from '../components/Contacts';
+import About from '../components/About';
+import Guide from '../components/Guide';
 
 const defaultRoutes = [
   {
@@ -47,18 +49,28 @@ const defaultRoutes = [
     component: Home
   },
   {
-    path: 'contact',
-    component: HelloWorld,
+    path: 'contacts',
+    component: Contacts,
     meta: {
-      auth: true
     }
   },
   {
     path: 'about',
-    component: HelloWorld1,
+    component: About,
     meta: {
-      auth: true,
-      admin: true
+    }
+  },
+  {
+    path: 'guide',
+    component: Guide,
+    meta: {
+    }
+  },
+  {
+    path: 'eventList',
+    component: EventList,
+    meta: {
+      auth: true
     }
   }
 ];

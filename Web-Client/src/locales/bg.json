@@ -1,12 +1,15 @@
 {
   "nav": {
     "home": "Начало",
+    "events": "Събития",
 
     "languageChange": "Самяна на езика"
   },
   "page": {
     "": " Начало",
-    "about": "Повече"
+    "about": "Повече",
+    "guide": "Наръчник за работа със сайта",
+    "contacts": "Контакти"
   },
 
   "login": {
@@ -21,9 +24,11 @@
     "alreadyRegistered": "Вече имаш регистация? ",
     "singIn": "Впиши се!"
   },
-
-  "jumbotron": {
-    "welcome": "Добре дошли в Eventer!"
+  "home": {
+    "jumbotron": {
+      "welcome": "Добре дошли в Eventer!",
+      "begin": "Да започваме"
+    }
   },
 
   "register": {
@@ -50,5 +55,12 @@
     },
     "noRegistration": "Нямаш регистрация? ",
     "invite": "Регистрирай се!"
+  },
+  "footer": {
+    "about": "Повече",
+    "guide": "Наръчник за работа със сайта",
+    "contacts": " Контакти"
+
   }
 }
+
