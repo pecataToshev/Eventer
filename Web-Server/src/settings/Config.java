@@ -24,7 +24,7 @@ public class Config {
 	public static final RandomString RANDOM_STRING = new RandomString();
 
 	private static ConfigWebApp configWebApp = new ConfigWebApp();
-	private static String urlPrefix = "/DanceWriter";
+	private static String urlPrefix = "/Eventer";
 	private static ConfigWatcher configWatcher = new ConfigWatcher(TIMESTAMP_CREATION_TIME);
 	private static Dirs dirs = new Dirs();
 	private static Jongo jongo = null;

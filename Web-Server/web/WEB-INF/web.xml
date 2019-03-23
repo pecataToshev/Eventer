@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-	<display-name>Dance Writer</display-name>
+	<display-name>Eventer</display-name>
 
 	<context-param>
 		<param-name>DataPathWin</param-name>
