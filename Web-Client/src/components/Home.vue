@@ -3,10 +3,6 @@
     <div class="d-flex justify-content-center">
 
       <mdb-carousel class="col-lg-12" :interval="8000" showControls showIndicators>
-        <mdb-carousel-item img src="https://www.w3schools.com/w3css/img_lights.jpg" mask="black-light"
-                           alt="First slide">
-          <mdb-carousel-caption title="Light mask" text="First text"></mdb-carousel-caption>
-        </mdb-carousel-item>
         <mdb-carousel-item img src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" mask="black-strong"
                            alt="Second slide">
           <mdb-carousel-caption title="Strong mask" text="Second text"></mdb-carousel-caption>
@@ -17,7 +13,10 @@
         </mdb-carousel-item>
       </mdb-carousel>
     </div>
-    <div style="margin-top: 2rem;">
+      <div v-if="$root.authenticated" style="margin-top: 2rem;">
+        <mdb-btn size="lg" gradient="aqua">{{'home.jumbotron.begin' | translate }}</mdb-btn>
+      </div>
+    <div v-else style="margin-top: 2rem;">
       <mdb-btn size="lg" gradient="aqua">{{'home.jumbotron.begin' | translate }}</mdb-btn>
     </div>
     <div class="container d-flex justify-content-center" style="margin-top: 2rem;">
@@ -67,6 +66,9 @@
 </template>
 
 <script>
+  import Login from './ModalLogin';
+  import Register from './ModalRegister';
+
   import {
     mdbJumbotron,
     mdbBtn,
@@ -75,7 +77,11 @@
     mdbCarouselCaption,
     mdbCard,
     mdbCardTitle,
-    mdbCardText
+    mdbCardText,
+    mdbDropdown,
+    mdbDropdownItem,
+    mdbDropdownMenu,
+    mdbDropdownToggle,
   } from "mdbvue";
 
   export default {
@@ -88,11 +94,20 @@
       mdbCarouselCaption,
       mdbCard,
       mdbCardTitle,
-      mdbCardText
+      mdbCardText,
+      Login,
+      Register,
+      mdbDropdown,
+      mdbDropdownItem,
+      mdbDropdownMenu,
+      mdbDropdownToggle,
     },
     methods: {
       hj(e) {
         console.log(e);
+      },
+      openLogin (){
+        Login.methods.openRegister();
       }
     }
   };

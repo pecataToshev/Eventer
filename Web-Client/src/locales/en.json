@@ -5,7 +5,8 @@
   },
   "page": {
     "": " Home",
-    "about": "About"
+    "about": "About",
+    "eventList": "Събития"
   },
 
   "login": {
@@ -55,8 +56,10 @@
   "footer": {
     "about": "About",
     "guide": "Site map",
-    "contact": " Contacts"
-
+    "contacts": " Contacts"
+  },
+  "contacts": {
+    "": "Contact us"
   }
 }
 

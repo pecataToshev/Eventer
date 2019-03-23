@@ -15,6 +15,11 @@
             </mdb-nav-item>
           </template>
           <template v-else>
+            <!-- Home -->
+            <mdb-nav-item waves-fixed>
+              <router-link :to="$root.formatLink('')">{{ 'nav.home' | translate }}</router-link>
+            </mdb-nav-item>
+            <!--/ Home -->
             <!-- Login -->
             <login ref="login"></login>
             <!--/ Login -->
@@ -56,6 +61,7 @@ import Register from './ModalRegister';
 
 import { languages } from "../router";
 import router from "../router";
+import Home from "./Home";
 
 let langs = [];
 for(let langInd in languages) {
@@ -69,6 +75,7 @@ for(let langInd in languages) {
 export default {
   name: 'Navigation',
   components: {
+    Home,
     mdbNavbar,
     mdbNavItem,
     mdbNavbarNav,

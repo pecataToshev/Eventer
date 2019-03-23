@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Footer -->
-    <mdb-footer color="#69f0ae green accent-2" class="pt-10 mt-10 fixed-bottom">
+    <mdb-footer color="#69f0ae green accent-2" class="page-footer pt-10 mt-10">
       <mdb-container class="text-center ">
         <mdb-row class="row d-flex justify-content-center">
           <mdb-col col="sm-4">
