@@ -77,11 +77,7 @@
     mdbCarouselCaption,
     mdbCard,
     mdbCardTitle,
-    mdbCardText,
-    mdbDropdown,
-    mdbDropdownItem,
-    mdbDropdownMenu,
-    mdbDropdownToggle,
+    mdbCardText
   } from "mdbvue";
 
   export default {
@@ -96,11 +92,7 @@
       mdbCardTitle,
       mdbCardText,
       Login,
-      Register,
-      mdbDropdown,
-      mdbDropdownItem,
-      mdbDropdownMenu,
-      mdbDropdownToggle,
+      Register
     },
     methods: {
       hj(e) {

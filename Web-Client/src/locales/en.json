@@ -59,7 +59,16 @@
     "contacts": " Contacts"
   },
   "contacts": {
-    "": "Contact us"
+    "": "Contacts",
+    "briefing": "Feel free to contact us anytime!:",
+    "phone": "Phone number:(+359) ",
+    "email": "e-mail: ",
+    "address": "Address:  Blvd \"James Bourchier\" 5, 1164 g.k. Lozenets, Sofia"
+  },
+  "about": {
+    "" : "About us",
+    "opening": "We are the best!"
+
   }
 }
 
